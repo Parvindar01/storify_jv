@@ -455,7 +455,7 @@ input{
 }
 /** About Section Start **/
 .sp_aboutSection{
-  background:#F0F7FF url(../images/aboutbg.jpg) no-repeat top center / cover;
+  background:#F0F7FF url(/jv/images/aboutbg.jpg) no-repeat top center / cover;
 }
 .sp_mainheading {
   display: flex;
