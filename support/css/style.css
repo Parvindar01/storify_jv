@@ -24,17 +24,23 @@ body{
 .top_spacer20{
 	margin-top: 20px;
 }
+.top_spacer30{
+	margin-top: 30px;
+}
 .top_spacer50{
 	margin: 50px 0px 0px !important;
 }
 .ty_big_box{
-    background: url(../images/text_bg.jpg) no-repeat;
+    background:url(../images/text_bg.jpg) no-repeat bottom center;
     border-radius: 50px;
     padding: 30px;
     width: 100%;
     text-align: center;
     background-size: cover;
     color: #48576d;
+}
+.ty_big_box img {
+    width: 250px;
 }
 .ty_big_box h1{
 	font-family: 'Allura', cursive;
