@@ -426,6 +426,7 @@ h1,h2,h3,h4,h5,h6{
   transition: all 0.5s;
   font-size: 20px;
   font-weight: 500;
+  border: 0;
 }
 .sp_gbox_btn:hover{
   background-color: var(--darkColor);
@@ -448,7 +449,7 @@ input{
 .sp_formHolder {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-around;
   max-width: 480px;
   margin: auto;
   flex-wrap: wrap;
@@ -570,7 +571,7 @@ input{
   background-color: var(--bgYellow);
 }
 .sp_stepBox_holder{
-  margin-top: 100px;
+  margin-top: 60px;
 }
 .sp_mainheading h2 span {
   padding: 28px 85px;
