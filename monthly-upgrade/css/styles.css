@@ -1,0 +1,1014 @@
+/*--------------------- Copyright (c) 2022 ----------------------- 
+[Master Stylesheet] 
+Product: Storify
+-------------------------------------------------------------------*/
+
+/* 1. Global CSS Start */
+
+:root {
+    --storfy-global-family:  'Mulish', sans-serif;
+    --storfy-global-color: #4c4c4c;
+    --storfy-global-size: 16px;
+    --storfy-title-family:  'Mulish', sans-serif;
+    --storfy-title-color: #010101;
+    --storfy-title-size: 32px;
+    --storfy-body-bg: #ffffff;
+    --storfy-primary-color: #1cb686;
+    --storfy-white: #ffffff;
+    --storfy-transition: all 0.3s;
+    --storfy-yellow: #f1cf12;
+    --storfy-budget-color: #f93c28;
+}
+* {
+    outline: 0 !important;
+}
+body {
+    font-family: var(--storfy-global-family);
+    font-weight: 400;
+    font-size: var(--storfy-global-size);
+    line-height: 1.8;
+    background: var(--storfy-body-bg);
+    color: var(--storfy-global-color);
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+}
+/** Top Button CSS **/
+
+#scroll {
+    position: fixed;
+    right: 15px;
+    bottom: 15px;
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    line-height: 36px;
+    z-index: 9;
+    visibility: hidden;
+    -webkit-transform: translateY(150px);
+    -ms-transform: translateY(150px);
+    transform: translateY(150px);
+    background: var(--storfy-primary-color);
+    color: var(--storfy-white);
+    font-size: 40px;
+    border-radius: 50%;
+    border: 2px solid #3fddac;
+}
+#scroll.active {
+    visibility: visible;
+    -webkit-transform: translateY(0);
+    -ms-transform: translateY(0);
+    transform: translateY(0);
+    animation: bounce 2s linear infinite;
+    -webkit-animation: bounce 2s linear infinite;
+    -moz-animation: bounce 2s linear infinite;
+}
+#scroll img {
+    height: 30px;
+}
+#scroll:hover {
+    box-shadow: 0 0 0 25px var(--storfy-title-color) inset;
+    border-color: transparent;
+}
+@keyframes bounce {
+    0%,
+    100% {
+        transform: translateY(-20px);
+    }
+    50% {
+        transform: translateY(0px);
+    }
+}
+
+/* Link & Buttons */
+
+a {
+    color: var(--storfy-global-color);
+}
+
+a:hover,
+a:focus,
+button,
+button:hover {
+    color: var(--storfy-primary-color);
+}
+
+a,
+a:hover,
+a:focus,
+button,
+button:hover {
+    text-decoration: none;
+    -webkit-transition: var(--storfy-transition);
+    -moz-transition: var(--storfy-transition);
+    -ms-transition: var(--storfy-transition);
+    -o-transition: var(--storfy-transition);
+    transition: var(--storfy-transition);
+}
+/* General (img inputs heading )*/
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+input,
+textarea,
+select,
+button,
+button:focus,
+button:hover,
+label,
+.form-control:focus {
+    box-shadow: none;
+}
+
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin-bottom: 10px;
+    color: var(--storfy-title-color);
+    font-family: var( --storfy-title-family);
+    line-height: 1.4;
+}
+
+strong {
+    font-weight: 800;
+}
+
+ul,
+ol {
+    margin: 0;
+    padding: 0 0 0 10px;
+    list-style: none;
+}
+.storfy-yellow-txt {
+    color: var(--storfy-yellow);
+}
+
+/* Button*/
+
+.storfy-btn {
+    background: var(--storfy-primary-color);
+    padding: 9px 20px 8px;
+    border-radius: 8px;
+    color: var(--storfy-white);
+    min-width: 180px;
+    font-size: 16px;
+    font-weight: 400;
+    text-align: center;
+    box-shadow: none;
+    display: inline-block;
+    position: relative;
+    overflow: hidden;
+}
+
+.storfy-btn:hover {
+    color: var(--storfy-white);
+    background: var(--storfy-primary-color);
+}
+
+.storfy-btn,
+.storfy-btn:hover,
+.storfy-btn:focus {
+    -webkit-transition: var(--storfy-transition);
+    -moz-transition: var(--storfy-transition);
+    -ms-transition: var(--storfy-transition);
+    -o-transition: var(--storfy-transition);
+    transition: var(--storfy-transition);
+}
+
+.storfy-dark-btn {
+    background: #29294c;
+    color: var(--storfy-white);
+}
+
+.storfy-dark-btn:hover {
+    background: var(--storfy-primary-color);
+    color: var(--storfy-white);
+}
+
+.storfy-btn span {
+    position: relative;
+}
+
+.storfy-btn:hover span,
+.storfy-btn:focus span {
+    color: var(--storfy-white);
+}
+.storfy-btn:focus {
+    color: var(--storfy-white) !important;
+}
+/* budget */
+.storfy-budget {
+    background: var(--storfy-budget-color);
+    color: var(--storfy-white);
+    border-radius: 10px;
+    padding: 8px 15px 10px;
+    font-weight: 700;
+    text-shadow: 3px 3px 4px rgb(0 0 0 / 30%);
+    line-height: 1.4;
+}
+/**/
+.text-left {
+    text-align: left !important;
+}
+.text-primary {
+    color: var(--storfy-primary-color) !important;
+}
+.has-bg {
+    background: #ebfff9 !important;
+}
+/***** loader ******/
+
+.loader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+    z-index: 999999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #ffffff;
+}
+.loader img {
+    width: 120px;
+}
+/***** loader ******/
+/* Main CSS*/
+.main-wrapper {
+    overflow: hidden;
+}
+/* Banner CSS */
+.storfy-banner-wrapper {
+    background: url(../images/banner-bg.png);
+    background-position: bottom center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    padding: 50px 0 120px;    
+    z-index: 1;
+}
+.storfy-banner-wrapper:before {
+    content:'';
+    background: url(../images/coins.png);
+    background-position: center;
+    background-repeat: no-repeat;    
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left:0;
+    z-index: -1;
+    animation: 3s installation infinite alternate;
+    
+}
+@keyframes installation{
+    0%{
+        transform: translateY(0);
+    }    
+    100%{
+        transform: translateY(-15px);
+    }
+}
+.storfy-banner-wrapper:after {
+    content:'';
+    background: url(../images/banner-shapes.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left:0;
+    z-index: -1;
+    animation: 4s installations infinite alternate;    
+}
+@keyframes installations{
+    0%{
+        transform: translateX(0);
+    }    
+    100%{
+        transform: translateX(-15px);
+    }
+}
+.storfy-banner-wrapper .container {
+    position: relative;
+    z-index: 1;
+}
+.storfy-banner-title {
+    font-size: 42px;
+    font-weight: 800;
+    color: var(--storfy-white);
+    margin: 41px 0 0;
+}
+.storfy-banner-title span {
+    display: block;
+}
+.storfy-banner-content .logo {
+    margin: 0 0 40px;
+}
+.storfy-banner-content .storfy-budget {
+    max-width: 900px;
+    font-size: 20px;
+    margin: auto;
+    border-radius: 40px 0 40px 0;    
+    position: relative;
+    z-index: 1;
+}
+.storfy-banner-content .storfy-budget:before {
+    content: '';
+    max-width: 920px;
+    border-radius: 40px 0 40px 0;
+    background-color: var(--storfy-budget-color);
+    opacity: 0.5;
+    position: absolute;
+    top: 0;
+    right: -10px;
+    bottom: 0;
+    left: -10px;
+    z-index: -1;
+}
+.storfy-banner-content span.storfy-video-banner-title {
+    font-size: 26px;
+    font-weight: 700;
+    color: #fff;
+    text-transform: capitalize;
+    display: block;
+    border: 1px solid #fff;
+    max-width: 1000px;
+    margin: 40px auto 0 auto;
+    border-radius: 50px;
+    padding: 10px;
+}
+.storfy-intro-img-row {
+    max-width: 850px;
+    margin: auto;
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+}
+.storfy-banner-content h4 {
+    font-size: 40px;
+    font-weight: 800;
+    color: #fff;
+    padding-top: 40px;
+}
+.storfy-intro-img-row img {
+    border-radius: 3px;
+    border: 6px solid var(--storfy-white);
+}
+.storfy-video-ovarlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgb(0 0 0 / 3%);
+    border-radius: 6px;
+}
+.storfy-video-ovarlay a {
+    width: 80px;
+    height: 80px;
+    position: relative;
+    display: inline-block;
+}
+.storfy-video-ovarlay a svg {
+    fill: var(--storfy-white);
+}
+.storfy-intro-img-row iframe {
+    width: 100%;
+    border: 6px solid var(--storfy-white);
+}
+.storfy-video-ovarlay a:before {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    box-shadow: 0 0 0 15px rgb(255 255 255 / 80%), 0 0 0 30px rgb(255 255 255 / 60%), 0 0 0 45px rgb(255 255 255 / 40%);
+    z-index: 0;
+    animation: modalRipple 2s infinite;
+    content: "";
+    border-radius: 50%;
+}
+.storfy-intro-img {
+    margin: 50px 0 -180px;
+}
+@keyframes modalRipple
+{
+    0%{
+        opacity:0;
+        -webkit-transform:scale(.5);
+        transform:scale(.5)
+    }
+    10%{
+        opacity:1
+    }
+    90%{
+        opacity:0
+    }
+    to{
+        opacity:0;
+        -webkit-transform:scale(1);
+        transform:scale(1)
+    }
+}
+.storfy-video-ovarlay a:hover svg{
+    fill: var(--storfy-primary-color);
+}
+.storfy-video-ovarlay a:hover svg,
+.storfy-video-ovarlay a svg {
+    -webkit-transition: var(--storfy-transition);
+    -moz-transition: var(--storfy-transition);
+    -ms-transition: var(--storfy-transition);
+    -o-transition: var(--storfy-transition);
+    transition: var(--storfy-transition);
+}
+/* Title */
+.storfy-title h6 {
+    color: var(--storfy-primary-color);
+    font-weight: 600;
+    text-align: center;
+    font-size: 36px;
+}
+.storfy-title h4 {
+    font-size: 40px;
+    font-weight: 800;
+    text-align: center;
+}
+.storfy-title h4 strong {
+    color: var(--storfy-budget-color);
+}
+.subtitle {
+    font-size: 22px;
+    font-weight: 800;
+    margin: 10px 0 20px;
+    color: var(--storfy-global-color);
+}
+/* Deal Time  Section */
+.storfy-deal-timer-wrapper {
+    padding: 120px 0 50px;
+    position: relative;
+}
+.storfy-deal-timer-wrapper:after {
+    position: absolute;
+    content: "";
+    background-image: url(../images/transparent.png);
+    background-size: auto;
+    background-repeat: no-repeat;
+    background-position: center;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: -1;
+    animation: 6s installation infinite alternate;
+}
+@keyframes installation {
+    0% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+}
+.storfy-timer-btn {
+    position: relative;
+}
+.storfy-timer-btn {
+    position: relative;
+    text-align: center;
+}
+.storfy-timer-btn a {
+    font-size: 28px;
+    color: var(--storfy-white);
+    font-weight: 800;
+    filter: drop-shadow(4.243px 4.243px 2.5px rgba(140,59,0,0.3));
+    padding: 20px 60px 45px 30px;
+    display: inline-block;
+    text-align: center;
+    background: url(../images/timer-btn.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 20px 0 20px;
+}
+.storfy-timer-btn a:hover {
+    transform: translateY(-3px);
+}
+.storfy-timer-box {
+    max-width: 600px;
+    margin: 60px auto 30px;
+    text-align: center;
+    border: 2px dashed var(--storfy-primary-color);
+    padding: 50px;
+    background: #f6fffc;
+    border-radius: 10px;
+    filter: drop-shadow(10.239px 9.548px 15px rgba(53,53,53,0.08));
+}
+.storfy-timer-box h4 {
+    display: inline-block;
+    position: absolute;
+    top: -24px;
+    background: var(--storfy-primary-color);
+    left: 0;
+    right: 0;
+    width: fit-content;
+    margin: auto;
+    border-radius: 40px;
+    color: var(--storfy-white);
+    max-width: 80%;
+    padding: 8px 30px;
+    font-size: 22px;
+    font-weight: 800;
+}
+.storfy-payment-box img {
+    display: block;
+    margin: auto;
+}
+.storfy-payment-box img:first-child{
+    margin: 0 auto 20px auto;
+}
+/* Timer */
+.countdown-2 {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+}
+.countdown-2>div {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column-reverse;
+    background: var(--storfy-primary-color);
+    border: 2px solid #2ee5ac;
+    margin: 0 12px;
+    padding: 8px 0 7px;
+    position: relative;
+    min-width: 110px;
+    border-radius: 50%;
+    min-height: 110px;
+    justify-content: center;
+    align-items: center;
+    color: var(--storfy-white);
+    box-shadow: 0px 0px 30px 0px rgb(28 182 134 / 15%);
+}
+.countdown-2>div:not(:first-of-type):before {
+    content: ":";
+    color: var(--storfy-primary-color);
+    position: absolute;
+    font-size: 25px;
+    left: -17px;
+    top: 0;
+    font-weight: 700;
+    bottom: 15px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+}
+.countdown-2 .amount {
+    font-size: 30px;
+    line-height: 1;
+    font-weight: 800;
+}
+/** Reseller Section **/
+.storfy-welcome-wrapper {
+    background-image: url(../images/welcome-bg.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    padding-top: 100px;
+    position: relative;
+    z-index: 1;
+}
+.storfy-welcome-wrapper:after {
+    content:'';
+    background: url(../images/welcome-shapes.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left:0;
+    z-index: -1;
+    animation: 4s installations infinite alternate;    
+}
+.storfy-welcome-wrapper .storfy-title h4{
+    color: #fff;
+    padding-bottom: 50px;
+}
+.storfy-reseller-img {
+    margin: 0 0 20px;
+}
+.storfy-wlcom-img img {
+    width: 450px;
+    height: auto;
+    object-fit: cover;
+}
+.storfy-wlcom-content {
+    background: #fff;
+    padding: 40px;
+    border-radius: 10px;
+}
+.storfy-reseller-content h4 {
+    font-size: 18px;
+    max-width: 300px;
+    margin: auto;
+}
+.storfy-wlcom-content h4 {
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 0;
+}
+.storfy-wlcom-content h4 span {
+    color: var(--storfy-budget-color);
+    font-weight: 800;
+}
+/* Happy Girl */
+.storfy-happy-girl-wrapper{
+    padding-top:100px;
+}
+.storfy-happy-girl-wrapper .storfy-title {
+    padding-bottom: 50px;
+}
+.storfy-happy-girl-wrapper .storfy-title h4 span {
+    color: var(--storfy-budget-color);
+}
+.storfy-list-sec-img img {
+    width: 500px;
+    height: auto;
+}
+.storfy-list-sec-content {    
+    border-radius: 10px;
+    filter: drop-shadow(0 0 15px rgba(22,22,22,0.1));
+    background-color: var(--storfy-white);
+    padding: 30px 30px;    
+}
+.storfy-list-sec-content ul {
+    padding-left: 0;
+}
+.storfy-list-sec-content ul li {
+    font-size: 20px;
+    color: var(--storfy-title-color);
+    font-weight: 700;
+    position: relative;
+    padding-left: 40px;
+    margin: 0 0 10px;
+}
+.storfy-list-sec-content ul li:before {
+    content: "";
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    left: 0;
+    top: 4px;
+    background: url(../images/list-hand.png);
+    background-position: left center;
+    background-repeat: no-repeat;
+    background-size: 25px 20px;
+}
+.storfy-list-sec-content ul li strong{
+    color: var(--storfy-budget-color);
+}
+/* Monthly upgrade css start */
+.storfy-month-upgrade-wrapper{
+    padding: 100px 0;
+    position: relative;
+}
+.storfy-month-upgrade-wrapper:before {
+    content:'';
+    background: url(../images/upgrade.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left:0;
+    z-index: -1;
+    animation: 4s installations infinite alternate;    
+}
+.storfy-image {
+    padding-top: 50px;
+}
+.storfy-image img {
+    width: 600px;
+    height: auto;
+}
+/* Monthly upgrade css end */
+/* Major Benefits css start */
+.storfy-benefits-wrapper{
+    padding: 100px 0;
+}
+.storfy-benefits-wrapper .storfy-title h4 { 
+    /* color: #fff; */
+    padding-bottom: 50px;
+}
+.storfy-benefits-wrapper .storfy-title h4 span{ 
+    color: var(--storfy-budget-color);
+}
+.storfy-border-box-wrap {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    grid-gap: 30px;
+}
+.storfy-border-box {
+    background: #fff;    
+    border-radius: 10px;
+    padding: 30px 40px;
+    box-shadow: 0 0 20px 0 rgb(28 182 134 / 6%);
+}
+.storfy-border-box h4{
+    font-size: 22px;
+    font-weight: 800;
+}
+.storfy-border-box h4 span{
+   color:var(--storfy-primary-color); 
+}
+.storfy-border-box p {
+    margin: 0;    
+    font-size: 18px;
+    font-weight: 600;
+}
+.storfy-benefits-wrapper h4.strofy-benefit-btn-heading {
+    padding-bottom: 0;
+    padding-top: 50px;
+}
+/* Major Benefits css end */
+/* guarantee css start */
+.storfy-guarantee-wrapper{
+    background-image: url(../images/dark-bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    padding:100px 0;
+}
+section.storfy-guarantee-wrapper .storfy-title h4 {
+    color: #fff;
+}
+section.storfy-guarantee-wrapper .storfy-title h4 span{
+    color: var(--storfy-yellow);
+}
+.storfy-gaurantee-box {
+    margin: 50px auto 0 auto;
+    background: #fff;
+    padding: 50px 50px 50px 200px;
+    border-radius: 10px;
+    border: 5px solid var(--storfy-budget-color);
+    display: flex;
+    position: relative;
+    max-width: 1100px;
+    width: 100%;
+}
+.storfy-guarantee-content p {
+    font-size: 22px;
+    font-weight: 700;
+    margin-bottom: 0;
+}
+.storfy-guarantee-img img {
+    width: 350px;
+    height: auto;
+}
+.storfy-guarantee-img {
+    position: absolute;
+    left: -170px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+/* guarantee css end */
+/* Footer css start */
+.storfy-footer-wrapper { 
+    padding: 100px 0 70px 0;
+}
+.storfy-footer-box .storfy-list-sec-content {
+    max-width: 700px;    
+    margin: auto;
+}
+.storfy-footer-wrapper .storfy-timer-btn {
+    padding-top: 30px;
+}
+/* Footer css end */
+/* copyright css start */
+.storfy-copyright-wrapper {
+    background: var(--storfy-primary-color);
+    padding: 10px 0;
+}
+.storfy-copyright-wrapper p{
+    font-size:16px;
+    font-weight:600;
+    color:#fff;
+    text-align: center;
+    margin-bottom: 0;
+}
+/* copyright css end */
+
+/** Responsive CSS Start **/
+@media(max-width:1600.98px){
+    .storfy-gaurantee-box {
+        padding: 40px 40px 40px 200px;
+        max-width: 900px;
+        width: 100%;
+    }
+}
+@media(max-width:1399.98px) {
+    .storfy-banner-title {
+        font-size: 36px;
+        margin: 21px 0 0;
+    }
+    .storfy-banner-content .storfy-budget {
+        max-width: 850px;
+        font-size: 20px;
+    }
+    .storfy-title h4 {
+        font-size: 34px;
+    }
+}
+@media(max-width:1199.98px) {
+    .storfy-banner-wrapper:before, .storfy-banner-wrapper:after{
+        display: none;
+    }
+    .storfy-border-box {     
+        padding: 20px;
+    }
+    .storfy-gaurantee-box {     
+        flex-direction: column;
+    }
+    .storfy-guarantee-img {
+        position: unset;     
+        transform: none;
+        text-align: center;
+    }
+    .storfy-gaurantee-box {
+        padding: 40px;     
+    }
+}
+@media(max-width:991.98px) {
+    .storfy-banner-title {
+        font-size: 26px;
+    }
+    .subtitle {
+        font-size: 18px;
+    }
+    .storfy-timer-btn a {
+        font-size: 18px;
+        padding: 20px 70px 40px 50px;
+        margin: 0;
+    }
+    .storfy-timer-box {
+        max-width: 95%;
+        padding: 50px 30px 30px;
+    }
+    .storfy-wlcom-img {
+        text-align: center;
+    }
+    .storfy-welcome-wrapper {        
+        padding-bottom: 100px;
+    }
+    .storfy-list-sec-img {
+        text-align: center;
+    }
+    .storfy-happy-girl-wrapper {     
+        padding-bottom: 100px;
+    }
+}
+
+@media(max-width:767.98px) {
+    .storfy-timer-btn a {
+        padding: 20px 30px 30px 20px;     
+        background-size: contain;
+    }
+    .storfy-timer-box {
+        max-width: 100%;     
+    }
+
+    .storfy-banner-shaps {
+        display: none;
+    }
+    .storfy-banner-title {
+        font-size: 26px;
+    }
+    .storfy-banner-content .storfy-budget {
+        max-width: 80%;
+        font-size: 16px;
+    }
+    .storfy-border-box-wrap img {
+        display: none;
+    }
+    .second-row, .fourth-row {
+        flex-direction: column-reverse;
+    }
+}
+
+@media(max-width:575.98px) {
+    .storfy-banner-content h4 {
+        font-size: 20px;     
+    }
+    .storfy-banner-content span.storfy-video-banner-title {
+        font-size: 16px;        
+        line-height: 1.3;
+    }
+    .storfy-timer-box {
+        max-width: 90%;
+    }
+    .storfy-wlcom-content {
+        padding: 20px;        
+    }
+    .storfy-wlcom-content h4 {
+        font-size: 20px;     
+    }
+    .storfy-list-sec-content ul li:before{
+        display: none;
+    }
+    .storfy-list-sec-content ul li {     
+        padding-left: 0;
+    }
+    .storfy-list-sec-content {     
+        padding: 20px;
+    }
+    .storfy-gaurantee-box {
+        padding: 20px;
+    }
+    .storfy-guarantee-content p {
+        font-size: 18px;     
+    }
+    .storfy-list-sec-content ul li {
+        font-size: 18px;
+        margin-bottom: 0;        
+    }
+    .countdown-2 {
+        flex-wrap: wrap;
+    }
+    .storfy-timer-box h4 {
+        font-size: 16px;
+    }
+    .countdown-2>div:not(:first-of-type):before {
+        display: none;
+    }
+    .storfy-timer-box {
+        padding: 30px 20px 20px;
+    }
+    .countdown-2>div {
+        min-width: 90px;
+        min-height: 90px;
+        margin: 10px 10px;
+    }
+    .storfy-timer-btn a {
+        font-size: 14px;
+    }
+    .storfy-video-ovarlay a {
+        width: 50px;
+        height: 50px;
+    }
+    .storfy-video-ovarlay a svg {
+        height: 50px;
+        width: 50px;
+    }
+}
+@media(max-width:425.98px){
+    .storfy-timer-btn a {
+        padding: 20px 20px 30px 10px;        
+    }
+    .storfy-welcome-wrapper, .storfy-happy-girl-wrapper, .storfy-month-upgrade-wrapper, .storfy-benefits-wrapper, .storfy-guarantee-wrapper{
+        padding: 50px 0;
+    }
+    .storfy-benefits-wrapper h4.strofy-benefit-btn-heading {     
+        padding-top: 0px;
+    }
+    .storfy-footer-wrapper{
+        padding: 50px 0 20px 0;
+    }
+    .storfy-title h4 {
+        font-size: 24px;
+    }
+}
+@media(max-width:390.98px){
+    .storfy-timer-btn a {
+        font-size: 16px;
+        background-size: cover;
+        font-weight: 600;
+        line-height: 1.3;
+        padding: 20px 10px 30px 10px;
+    }
+}
+@media(max-width:375.98px){
+    .storfy-timer-box h4 {
+        font-size: 14px;
+    }
+}
