@@ -123,7 +123,7 @@ ul li {
 }
 .mt-bonus-header {
     padding: 50px 0 38px;
-    background: url(/bonuses/images/header-bg.jpg);
+    background: url(../images/header-bg.jpg);
     text-align: center;
 }
 .mt-bonus-header .row,
