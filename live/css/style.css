@@ -1,8 +1,9 @@
+
 /********************************************************
 1. body start
  *******************************************************/
 
-body {
+ body {
     font-family: 'Mulish', sans-serif;
     font-weight: 400;
     font-size: 16px;
@@ -227,14 +228,21 @@ p {
     margin: 30px 0 0px;
     text-align: center;
 }
-.st_video {
+.st_bannerVideo {
     position: relative;
-    max-width: 1000px;
+    max-width: 830PX;
     margin: auto;
+    background: url(../images/video.png);
+    background-size: 100% 100%;
+    HEIGHT: 482px;
 }
-.st_video > img {
-    
-}
+.st_bannerVideo > iframe {
+    position: absolute;
+    top: 23px;
+    left: 23px;
+    WIDTH: CALC(100% - 46px);
+    height: calc(100% - 46px);
+} 
 
 .st_unlock > h1 {
     font-size: 58px;
@@ -395,8 +403,9 @@ img.check_shape {
     font-size: 46px;
     margin-left: 10px;
     color: #ffa000;
-    -webkit-text-stroke-width: 2px;
-    -webkit-text-stroke-color: black;
+    /* -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: black; */
+    text-shadow: 1px 2px 1px #000000e3;
 }
 .st_get_storify_btn a {
     padding: 40px 80px 60px 115px;
@@ -948,11 +957,6 @@ img.st_quote1 {
     font-weight: 900;
     font-size: 52px;
 }
-.st_section_wrapper6 .st_heading img {
-    position: absolute;
-    top: 225px;
-    right: 165px;
-}
 .st_section_wrapper6 .st_heading h1 span {
     color: #00acff;
 }
@@ -1469,6 +1473,13 @@ h2.st_so_its {
     height: 400px;
     border-radius: 20px;
     background-color: #f9fffd;
+}
+.st_section13_video iframe {
+    width: 100%;
+    height: 400px;
+    border-radius: 20px;
+    background-color: #f9fffd;
+    padding: 10px
 }
 /* Section 13 css */
 
@@ -2769,6 +2780,13 @@ h2.st_so_its {
 
 		background-position: center;
 	}
+    .st_section13_video {
+        text-align: center;
+    }
+    .st_section13_video iframe {
+        width: max-content;
+       
+    }
 }
 
 @media(max-width:767px) {
@@ -3136,6 +3154,9 @@ h2.st_so_its {
 	.st_angle_bottom.st_angle_bottom31 a {
 		bottom: 100px;
 	}
+    .st_bannerVideo {
+        HEIGHT: 228px;
+    }
 }
 
 
