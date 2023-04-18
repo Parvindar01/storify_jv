@@ -116,6 +116,13 @@ p {
     display: flex;
     align-items: center;
 }
+.st_topCounter > ul > li span.label {
+    font-size: 12px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    font-weight: 800;
+}
 .st_price_head h4 {
     color: #ffffff;
     margin-right: 20px;
@@ -424,7 +431,10 @@ img.check_shape {
     font-weight: 700;
     margin: 20px 0 20px;
 }
-
+.st_finalBuy > a {
+    display: inline-block;
+    padding: 30px 0;
+}
 
 
 
@@ -634,6 +644,8 @@ img.st_quote1 {
     flex: none;
     margin-right: 20px;
     border-radius: 100px;
+    height: 70px;
+    object-fit: cover;
 }
 .st_place_box4 h5 {
     color: #433462;
@@ -2108,7 +2120,6 @@ h2.st_so_its {
 	padding: 60px 0px 58px;
 	position: relative;
 }
-
 .st-section26-heading.st-section28-heading>h2 {
 	font-size: 60px;
 	color: #ffffff;
@@ -2157,7 +2168,17 @@ h2.st_so_its {
 .st_angle_bottom.st_angle_bottom29 a {
 	bottom: 70px;
 }
-
+.st-section28 .st_section2_text {
+    margin-top: 0px;
+}
+.st-section-shocked {
+    text-align: center;
+    padding: 30px 0 0 0;
+}
+.st-section-shocked > img {
+    width: 220px;
+    margin: auto;
+}
 /* section 28 css */
 /* section 29 css */
 
