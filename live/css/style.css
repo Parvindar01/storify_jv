@@ -100,6 +100,9 @@ p {
     background: #33cfa0;
     width: 4px;
 }
+.yellow_text_color{
+color: #ffba00;
+}
 /********************************************************
 1. body end
  *******************************************************/
@@ -2084,10 +2087,10 @@ h2.st_so_its {
 /* section 26 css */
 /* section 27 css */
 .st-section27 {
-	background-image: url(../images/section27-bg.png);
+	background-image: url(../images/banner13.png);
 	background-repeat: no-repeat;
-	background-size: cover;
-	padding: 100px 0px 230px;
+	background-size: 100% 100%;
+	padding: 100px 0px 120px;
 	position: relative;
 	background-position: center;
 }
@@ -2098,6 +2101,7 @@ h2.st_so_its {
 	font-weight: 900;
 	text-align: center;
 	line-height: 1.4;
+    margin-bottom: 50px;
 }
 
 .st-section27-heading h2 b {
@@ -2122,7 +2126,40 @@ h2.st_so_its {
 .st_angle_bottom.st_angle_bottom28 a {
 	bottom: 130px;
 }
-
+/* bonuses start  */
+.sp_bonusBox {
+    display: block;
+    margin-bottom: 50px;
+    padding-bottom: 50px;
+    border-bottom: 1px solid #363636;
+}
+.sp_bonusBox:last-child {
+    border-bottom: 0px;
+    padding-bottom: 0px;
+    margin-bottom: 0px;
+}
+.sp_bonusWorth {
+    font-weight: 900;
+    font-size: 30px;
+    margin-bottom: 20px;
+    position: relative;
+}
+.sp_bonusIcon_img {
+    position: relative;
+    top: -28px;
+    margin-right: 10px;
+}
+.sp_bonus_title {
+    font-size: 30px;
+    font-weight: 800;
+    margin-bottom: 20px;
+    color: #ffffff;
+}
+.st-bonus-pera {
+    color: #ffffff;
+    font-weight: 600;
+}
+/* bonuses end  */
 /* section 27 css */
 /* section 28 css */
 .st-section28 {
@@ -2679,6 +2716,21 @@ display: none;
 /* bottom to top */
 
 /* responsive css */
+@media(max-width:1800px) {
+    .st_banner_content > h1 {
+        font-size: 40px;
+    }
+}
+@media(max-width:1500px) {
+    .st_banner_content > h2 {
+        padding: 33px 65px;
+        font-size: 22px;
+        background-size: contain;
+    }
+    .st_banner_content > h1 {
+        font-size: 30px;
+    }
+}
 @media(max-width:1400px) {
 	.st-section30-inner-bg-shape {
 		height: auto;
@@ -2702,6 +2754,13 @@ display: none;
 }
 
 @media(max-width:1199px) {
+    .st_banner_content > h1 {
+        font-size: 26px;
+    }
+    .st_banner_content > h3 {
+        font-size: 20px;
+    }
+    
     .st_timer_box {
         padding: 0 15px;
     }
@@ -2811,6 +2870,14 @@ display: none;
 }
 
 @media(max-width:991px) {
+    .st_banner_content > h1 {
+        font-size: 20px;
+    }
+    .st_banner_content > h2 {
+        padding: 20px 42px;
+        font-size: 20px;
+        background-size: 100% 100%;
+    }
     
 	.st-section25-box-left.st-section25-box-right {
 
@@ -2839,6 +2906,15 @@ display: none;
 }
 
 @media(max-width:767px) {
+    .md_mt_50{
+    margin-top: 50px;
+    }
+    .md_mb_50{
+    margin-bottom: 50px;
+    }
+    .md-text-center{
+        text-align: center;
+    }
     .st_bannerVideo {
         max-width: 537px;
         HEIGHT: 332px;
@@ -2982,6 +3058,9 @@ display: none;
 
 
 @media(max-width:580px) {
+    .st_banner_content > h3 {
+        font-size: 16px;
+    }
     .st_bannerVideo {
         max-width: 537px;
         HEIGHT: 278px;
@@ -3028,6 +3107,12 @@ display: none;
 }
 
 @media(max-width:480px) {
+    .st_banner_content > h2 {
+        padding: 18px 25px;
+        font-size: 18px;
+        background-size: 100% 100%;
+        background-position: left;
+    }
 	.st_section_24_heading h1 {
 		font-size: 30px;
 		padding: 0px 0px 30px;
