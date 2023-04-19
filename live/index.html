@@ -36,33 +36,34 @@
 			<div class="st_price_head">
 				<h4>HURRY, EARLYBIRD PRICE ENDS IN</h4>
 			</div>
-			<div class="st_topCounter st_timer clockdiv">
-				<ul class="countdown-2" data-countdown="2023-05-02T00:00:00+02:00" data-countdown-option-leadingzero="true">
+			<div class="st_topCounter st_timer">
+				<ul class="ce-countdown">
 					<li>
-						<div class="days">
-							<span class="label"></span>
-							<span class="amount"></span>
+						<div class="ce-col">							
+							<span class="ce-days-label text"></span>
+							<span class="ce-days digit"></span>
 						</div>
 					</li>
 					<li>
-						<div class="hours">
-							<span class="label"></span>
-							<span class="amount"></span>
+						<div class="ce-col">							
+							<span class="ce-hours-label text"></span>
+							<span class="ce-hours digit"></span>
 						</div>
 					</li>
 					<li>
-						<div class="minutes">
-							<span class="label"></span>
-							<span class="amount"></span>
+						<div class="ce-col">
+							<span class="ce-minutes-label text"></span>
+							<span class="ce-minutes digit"></span>							 
 						</div>
 					</li>
 					<li>
-						<div class="seconds">
-							<span class="label"></span>
-							<span class="amount"></span>
+						<div class="ce-col">
+							<span class="ce-seconds-label text"></span>
+							<span class="ce-seconds digit"></span> 
 						</div>
 					</li>
 				</ul>
+				
 				<!-- <div class="clockdiv">
 					<div class="countdown-2" data-countdown="2023-09-17T00:00:00+02:00" data-countdown-option-leadingzero="true">
 						<div class="days">
@@ -2300,22 +2301,24 @@
 	<!-- section 33 -->
 	<!--Section Footer-->
 	<div class="st_section_wrapper29">
-		<div class="container">
+		<div class="container-fluid">
 			<div class="row">
-				<div class="col-lg-6 col-md-12">
-					<div class="st_mini_footer text-start">
-						<p>Copyright © Storify - All Rights Reserved | 2023</p>
+				<div class="col-lg-12 col-md-12">
+					<div class="st-copywrite-right">
+						<ul class="st-footer-link">
+							<li><a href="https://sales.storify.work/support" target="_blank">Support</a></li>
+							<li><a href="https://sales.storify.work/jv/pages/privacy-policy.html" target="_blank">Privacy Policy</a></li>
+							<li><a href="https://sales.storify.work/jv/pages/terms-of-service.html" target="_blank">Terms of Service</a></li>
+							<li><a href="/jv/pages/disclaimer.html" target="_blank">Disclaimer</a></li>
+							<li><a href="/jv/pages/cookie-policy.html" target="_blank">Cookie Policy</a></li>
+							<li><a href="/jv/pages/data-remover.html" target="_blank">Data Remover</a></li>
+							<li><a href="/jv/pages/contact-us.html" target="_blank">Contact Us</a></li>
+						</ul>
 					</div>
 				</div>
-				<div class="col-lg-6 col-md-12">
-					<div class="st-copywrite-right text-end">
-						<ul>
-						<li><a href="https://sales.storify.work/support" target="_blank">Support</a></li>
-						<li><a href="javascript:void(0);">|</a></li>
-						<li><a href="https://sales.storify.work/live/pages/privacy-policy.html" target="_blank">Privacy Policy</a></li>
-						<li><a href="javascript:void(0);">|</a></li>
-						<li><a href="https://sales.storify.work/live/pages/terms-of-service.html" target="_blank">Terms of Service</a></li>
-						</ul>
+				<div class="col-lg-12 col-md-12">
+					<div class="st_mini_footer">
+						<p>Copyright © Storify - All Rights Reserved | 2023</p>
 					</div>
 				</div>
 			</div>
@@ -2337,9 +2340,11 @@
 	<!--Main js file Style-->
 	<script src="/live/js/jquery.min.js"></script>
 	<script src="/live/js/bootstrap.min.js"></script>
-	<!-- <script src="/live/js/timer.js"></script> -->
 	<script src="/live/js/typer.min.js"></script>
+	<script src="/live/js/timer.js"></script>
+	<script src="https://localsiteshub.com/sp/storify_timer_js/timer.js"></script>
 	<script src="/live/js/custom.js"></script>
+	
 	<script type="text/javascript">
 		$(".sp_brand_typo").typer({
 			strings: [

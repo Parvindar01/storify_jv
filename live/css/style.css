@@ -116,11 +116,20 @@ p {
     display: flex;
     align-items: center;
 }
-.st_topCounter > ul > li span.label {
+.ce-countdown > li > .ce-col > span.text {
     font-size: 12px;
     text-align: center;
     display: flex;
     justify-content: center;
+    font-weight: 800;
+}
+.ce-countdown > li > .ce-col > span {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+}
+.st_topCounter > ul > li span.label {
+    font-size: 12px;
     font-weight: 800;
 }
 .st_price_head h4 {
@@ -2541,29 +2550,48 @@ h2.st_so_its {
 .st_section_wrapper29 {
 	background-color: #30363c;
 	text-align: center;
-	padding: 10px;
+	padding: 15px 10px;
 }
 
 .st-copywrite-right {
-	text-align: right;
+	margin-bottom: 10px;
 }
 
 .st_mini_footer>p {
-	font-size: 18px;
+	font-size: 16px;
 	color: #ffffff;
-	font-weight: 700;
 }
 
+.st-copywrite-right ul{
+    margin: 0 -10px;
+}
 .st-copywrite-right ul li {
 	display: inline-block;
+    padding: 0 10px;
 }
 
 .st-copywrite-right ul li a {
-	font-size: 18px;
+	font-size: 16px;
 	color: #ffffff;
-	font-weight: 700;
+    position: relative;
 }
-
+.st-footer-link > li > a:after {
+    content: "";
+    position: absolute;
+    right: -10px;
+    top: 0;
+    bottom: 0;
+    background: #fff;
+    width: 2px;
+    margin: auto;
+    height: 13px;
+}
+.st-footer-link > li:last-child {
+padding-right: 0;
+}
+.st-footer-link > li:last-child > a:after{
+display: none;
+}
 /* Section footer css */
 
 /***** loader ******/
@@ -2811,6 +2839,10 @@ h2.st_so_its {
 }
 
 @media(max-width:767px) {
+    .st_bannerVideo {
+        max-width: 537px;
+        HEIGHT: 332px;
+    }
 	.st_feature_table {
 		height: 530px;
 	}
@@ -2948,7 +2980,13 @@ h2.st_so_its {
 	}
 }
 
+
 @media(max-width:580px) {
+    .st_bannerVideo {
+        max-width: 537px;
+        HEIGHT: 278px;
+    }
+    
 	.st_table-desktop-none {
 		display: block;
 	}
