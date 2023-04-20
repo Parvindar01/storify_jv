@@ -117,13 +117,89 @@ body {
     /********************************************************
     1. body end
     *******************************************************/
+    /* sticky bar toogle css start */
+    .st_stickybar_wrapper.stickybar_close .st_timer ul {
+        margin-top: -60px;
+    }
+    body.bar_close {
+        padding: 0 !important;
+        -webkit-transition: all 0.3s;
+        -moz-transition: all 0.3s;
+        -ms-transition: all 0.3s;
+        transition: all 0.3s;
+    }
+    .st_stickybar_wrapper {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 99999;
+        -webkit-transition: all 0.3s;
+        -moz-transition: all 0.3s;
+        -ms-transition: all 0.3s;
+        transition: all 0.3s;
+    }
+    .st_stickybar_wrapper.stickybar_close{
+        -webkit-transform:translateY(-100%);
+        -moz-transform:translateY(-100%);
+        -ms-transform:translateY(-100%);
+        transform:translateY(-100%);
+    }
+    .st_stickybar_toggle {
+        position: absolute;
+        top: calc(100% - 1px);
+        left: 30px;
+        border-left: 30px solid transparent;
+        border-right: 30px solid transparent;
+        border-top: 30px solid #14b686;
+        cursor: pointer;
+        width: 60px;
+        height: 30px;
+        border: 0;
+        background-color: #14b686;
+        border-radius: 0 0 50px 50px;
+    }
+    .st_stickybar_toggle > span{
+        width: 15px;
+        height: 2px;
+        background-color: #ffffff;
+        border-radius: 3px;
+        display: block;
+        position: absolute;
+        bottom: 18px;
+        left: 21px;
+    }
+    .st_stickybar_toggle > span:nth-child(1){
+        -webkit-transform:rotate(45deg);
+        -moz-transform:rotate(45deg);
+        -ms-transform:rotate(45deg);
+        transform:rotate(45deg);
+    }
+    .st_stickybar_toggle > span:nth-child(2){
+        -webkit-transform:rotate(-45deg);
+        -moz-transform:rotate(-45deg);
+        -ms-transform:rotate(-45deg);
+        transform:rotate(-45deg);
+    }
+    .st_stickybar_wrapper.stickybar_close .st_stickybar_toggle > span:nth-child(1){
+        -webkit-transform: rotate(135deg) translate(-4px,-4px);
+        -moz-transform: rrotate(135deg) translate(-4px,-4px);
+        -ms-transform: rotate(135deg) translate(-4px,-4px);
+        transform: rotate(135deg) translate(-4px,-4px);
+    }
+    .st_stickybar_wrapper.stickybar_close .st_stickybar_toggle > span:nth-child(2){
+        -webkit-transform: rotate(-135deg) translate(3px,-3px);
+        -moz-transform: rotate(-135deg) translate(3px,-3px);
+        -ms-transform: rotate(-135deg) translate(3px,-3px);
+        transform: rotate(-135deg) translate(3px,-3px);
+    }
+    /* sticky bar toogle css end */
     .st_timer_box {
     display: flex;
     justify-content: space-between;
     align-items: center;
     background-color: #14b686;
     padding: 0 80px;
-    position: relative;
     z-index: 3;
     }
     
@@ -179,6 +255,7 @@ body {
     font-size: 26px;
     font-weight: 900;
     position: relative;
+    box-shadow: 0px 4px 10px 0px rgb(0 0 0 / 6%);
     }
     
     .st_timer ul li:after {
