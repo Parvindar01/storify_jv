@@ -747,7 +747,20 @@ body {
     background-position: bottom 65px center;
     transition: all 0.5s;
     }
-    
+    .st_testiIcon {
+        width: 70px;
+        margin-right: 20px;
+        height: 70px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: #b4b2b3;
+        border-radius: 50%;
+        color: #433462;
+        font-weight: 800;
+        font-size: 16px;
+        margin-right: 20px;
+    }
     .st_marketers_text:hover {
     transform: translateY(-3px);
     }
