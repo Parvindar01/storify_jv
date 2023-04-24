@@ -536,7 +536,7 @@ ol {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    padding-top: 100px;
+    padding-top: 60px;
     position: relative;
     z-index: 1;
 }
@@ -553,27 +553,44 @@ ol {
     z-index: -1;
     animation: 4s installations infinite alternate;    
 }
-.storfy-welcome-wrapper .storfy-title h4{
-    color: #fff;
-    padding-bottom: 50px;
-}
 .storfy-reseller-img {
     margin: 0 0 20px;
 }
 .storfy-wlcom-img img {
-    width: 450px;
     height: auto;
     object-fit: cover;
 }
-.storfy-wlcom-content {
-    background: #fff;
-    padding: 40px;
-    border-radius: 10px;
+.storfy-wlcom-content.storify-green-shape {
+    padding: 52px 90px 80px;
+}
+.storify-green-shape {
+    background-image: url(../images/green_box.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-position: center;
+    padding: 40px 70px;
+    max-width: 666px;
+    flex: none;
+    width: 100%;
 }
 .storfy-reseller-content h4 {
     font-size: 18px;
     max-width: 300px;
     margin: auto;
+}
+.storfy-wlcom-content h1 {
+    color: var(--storfy-primary-color);
+    font-size: 40px;
+    font-weight: 800;
+}
+.storify-shadow-heading {
+    background-color: #1cb686;
+    padding: 5px 15px;
+    box-shadow: -8px 8px 0 0 #1e9771;
+    color: #ffffff;
+    display: inline-flex;
+    font-size: 38px;
+    font-weight: 900;
 }
 .storfy-wlcom-content h4 {
     font-size: 24px;
