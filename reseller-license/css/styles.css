@@ -1320,7 +1320,7 @@ ol {
     background: var(--storfy-white);
 }
 .storfy-title h4 strong span {
-    color: #fecb00;
+    color: var(--storfy-primary-color);
     font-weight: 800;
 }
 .storify-shadow-heading {
@@ -1332,6 +1332,23 @@ ol {
     font-size: 38px;
     font-weight: 900;
 }
+
+/* zoom animation  */
+.zoom_animation{
+    animation: stretch 0.8s ease infinite;
+  }
+  @keyframes stretch {
+    0% {
+        transform: scale(1, 1);
+      }
+      50% {
+        transform: scale(1.02, 1.02);
+      }
+      100% {
+        transform: scale(1, 1);
+      }
+  }
+  /* zoom animation  */
 /** Responsive CSS Start **/
 
 @media(min-width:1400px) {
