@@ -1038,6 +1038,11 @@ padding-right: 0;
 .sp_IconBoxTextT {
   font-size: 18px;
 }
+.sp_IconBoxIconI > img {
+  max-width: 190px;
+}
+
+
   /*Banner section*/
   .sp_h1 {
     font-size: 18px;
@@ -1071,6 +1076,9 @@ padding-right: 0;
 }
 .sp_upgrade_iconwrap:before, .sp_upgrade_iconwrap:after{
   display: none;
+}
+.sp_IconBoxTextT {
+  font-size: 16px;
 }
 /*Banner section*/
 .sp_h1 {
