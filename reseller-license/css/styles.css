@@ -715,13 +715,13 @@ ol {
 }
 /* Timer */
 
-.countdown-2 {
+.ce-countdown {
     display: flex;
     justify-content: center;
     align-content: center;
     align-items: center;
 }
-.countdown-2>div {
+.ce-countdown>div {
     display: flex;
     flex-wrap: wrap;
     flex-direction: column-reverse;
@@ -738,7 +738,7 @@ ol {
     color: var(--storfy-white);
     box-shadow: 0px 0px 30px 0px rgb(28 182 134 / 15%);
 }
-.countdown-2>div:not(:first-of-type):before {
+.ce-countdown>div:not(:first-of-type):before {
     content: ":";
     color: var(--storfy-primary-color);
     position: absolute;
@@ -751,7 +751,7 @@ ol {
     display: flex;
     align-items: center;
 }
-.countdown-2 .amount {
+.ce-countdown .number {
     font-size: 30px;
     line-height: 1;
     font-weight: 800;
@@ -1500,24 +1500,31 @@ ol {
     .storfy-steps-wrapper .center-row {
         flex-direction: column-reverse;
     }
+    /* page timer */
+    .ce-countdown>div {
+        min-width: 80px;
+        min-height: 80px;
+        font-size: 12px;
+    }
+    .ce-countdown .number {
+        font-size: 20px;
+    }
 }
 
 @media(max-width:575.98px) {
-    .countdown-2 {
+    .ce-countdown {
         flex-wrap: wrap;
     }
     .storfy-timer-box h4 {
         font-size: 16px;
     }
-    .countdown-2>div:not(:first-of-type):before {
+    .ce-countdown>div:not(:first-of-type):before {
         display: none;
     }
     .storfy-timer-box {
         padding: 30px 20px 20px;
     }
-    .countdown-2>div {
-        min-width: 90px;
-        min-height: 90px;
+    .ce-countdown>div {
         margin: 10px 10px;
     }
     .storfy-timer-btn a {
