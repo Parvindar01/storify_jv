@@ -1231,8 +1231,8 @@ ol {
     color: var(--storfy-primary-color);
 }
 .storfy-software-wrapper .storfy-content h4 {
-    font-size: 26px;
-    margin: 0 0 5px;
+    font-size: 24px;
+    margin: 0 0 15px;
     font-weight: 900;
     color: var(--storfy-title-color);
     /* filter: drop-shadow(3.009px 3.993px 0px rgba(0, 0, 0, 0.2)); */
