@@ -118,6 +118,12 @@ body::-webkit-scrollbar-thumb {
 .paddertop50{
     padding-top: 50px;
 }
+.paddertop80{
+    padding-top: 80px;
+}
+.paddertop100{
+    padding-top: 100px;
+}
 .paddertop67{
     padding-top: 67px;
 }
@@ -132,6 +138,9 @@ body::-webkit-scrollbar-thumb {
 }
 .padderbottom80{
     padding-bottom: 80px;
+}
+.padderbottom100{
+    padding-bottom: 100px;
 }
 /** Top Button CSS **/
 
@@ -364,16 +373,12 @@ ol {
     font-size: 24px;
     margin: auto;
 }
-.storfy-intro-img-row {
-    max-width: 850px;
-    margin: auto;
-    border-radius: 10px;
-    overflow: hidden;
-    position: relative;
-}
-.storfy-intro-img-row img {
+.storfy-intro-video iframe {
     border-radius: 3px;
     border: 6px solid var(--storfy-white);
+    width: 100%;
+    height: 437px;
+    box-shadow: 0px 4px 30px 0px rgb(0 0 0 / 11%);
 }
 .storfy-video-ovarlay {
     position: absolute;
@@ -396,10 +401,6 @@ ol {
 .storfy-video-ovarlay a svg {
     fill: var(--storfy-white);
 }
-.storfy-intro-img-row iframe {
-    width: 100%;
-    border: 6px solid var(--storfy-white);
-}
 .storfy-video-ovarlay a:before {
     position: absolute;
     left: 0;
@@ -412,7 +413,7 @@ ol {
     content: "";
     border-radius: 50%;
 }
-.storfy-intro-img {
+.storfy-intro-video {
     margin: 50px 0 -180px;
 }
 @keyframes modalRipple
@@ -1226,12 +1227,28 @@ ol {
 .storfy-content p strong {
     color: var(--storfy-yellow);
 }
+.storfy-software-wrapper .storfy-content p strong {
+    color: var(--storfy-primary-color);
+}
 .storfy-software-wrapper .storfy-content h4 {
     font-size: 26px;
     margin: 0 0 5px;
     font-weight: 900;
-    color: var(--storfy-white);
-    filter: drop-shadow(3.009px 3.993px 0px rgba(0, 0, 0, 0.2));
+    color: var(--storfy-title-color);
+    /* filter: drop-shadow(3.009px 3.993px 0px rgba(0, 0, 0, 0.2)); */
+}
+.storfy-software-wrapper .storfy-content > p {
+    color: var(--storfy-title-color);
+}
+.storify-green-shape {
+    background-image: url(../images/green_box.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-position: center;
+    padding: 40px 70px;
+    max-width: 666px;
+    flex: none;
+    width: 100%;
 }
 .mb-30 {
     margin-bottom: 30px !important;
@@ -1247,10 +1264,14 @@ ol {
     background-position: center;
     margin: 0 auto 40px;
     padding: 50px 40px 22px;
+    text-align: center;
 }
 .storfy-benifit-content  h4 {
-    font-size: 34px;
+    font-size: 28px;
     font-weight: 800;
+}
+.storfy-benifit-image > img {
+    max-width: 280px;
 }
 .storfy-license-wrapper {
     position: relative;
@@ -1288,7 +1309,7 @@ ol {
 .major-banifit-box .storfy-content h4 {
     font-weight: 800;
     margin: 0 0 10px;
-    font-size: 22px;
+    font-size: 26px;
 }
 .solid-bg-img {
     background: url(../images/presenting.jpg);
@@ -1302,7 +1323,15 @@ ol {
     color: #fecb00;
     font-weight: 800;
 }
-
+.storify-shadow-heading {
+    background-color: #1cb686;
+    padding: 5px 15px;
+    box-shadow: -8px 8px 0 0 #1e9771;
+    color: #ffffff;
+    display: inline-flex;
+    font-size: 38px;
+    font-weight: 900;
+}
 /** Responsive CSS Start **/
 
 @media(min-width:1400px) {
@@ -1408,19 +1437,25 @@ ol {
         max-width: 850px;
         font-size: 20px;
     }
-    .storfy-title h4 {
+    .storfy-title h4, .storify-shadow-heading {
         font-size: 34px;
+    }
+    .storfy-intro-video iframe {
+        height: 425px;
     }
 }
 
 @media(max-width:1199.98px) {
+    .storfy-intro-video iframe {
+        height: 360px;
+    }
 }
 
 @media(max-width:991.98px) {
     .storfy-banner-title {
         font-size: 26px;
     }
-    .storfy-title h4 {
+    .storfy-title h4, .storify-shadow-heading {
         font-size: 24px;
     }
     .subtitle {
@@ -1469,6 +1504,9 @@ ol {
     .storfy-steps-wrapper .center-row {
         flex-direction: unset;
     }
+    .storfy-intro-video iframe {
+        height: 395px;
+    }
 }
 
 @media(max-width:767.98px) {
@@ -1499,6 +1537,9 @@ ol {
     }
     .storfy-steps-wrapper .center-row {
         flex-direction: column-reverse;
+    }
+    .storfy-intro-video iframe {
+        height: 305px;
     }
     /* page timer */
     .ce-countdown>div {
@@ -1567,5 +1608,9 @@ ol {
         bottom: auto;
         top: -20px;
         right: -10px;
+    }
+    .storfy-intro-video iframe {
+        height: max-content;
+        width: max-content;
     }
 }
