@@ -106,6 +106,12 @@ body::-webkit-scrollbar-thumb {
     }
 }
 /*spacers*/
+.paddertop10{
+    padding-top: 10px;
+}
+.paddertop20{
+    padding-top: 20px;
+}
 .paddertop30{
     padding-top: 30px;
 }
@@ -1054,9 +1060,38 @@ ol {
     background-position: top center;
     background-repeat: no-repeat;
     background-size: cover;
-    padding: 120px 0 50px;
+    padding: 80px 0 30px;
 }
-.foot-note p {
+.storfy-footer-link {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .storfy-footer-link > li > a {
+    font-size: 16px;
+    color: #ffffff;
+    position: relative;
+    display: inline-block;
+    padding: 0 10px;
+  }
+  .storfy-footer-link > li > a:after {
+    content: "";
+    position: absolute;
+    right: 0px;
+    top: 0;
+    bottom: 0;
+    background: #fff;
+    width: 2px;
+    margin: auto;
+    height: 13px;
+  }
+  .storfy-footer-link > li:last-child > a:after {
+    display: none;
+  }
+  .storfy-footer-link > li:last-child > a {
+  padding-right: 0;
+  }
+.foot-note a{
     color: var(--storfy-budget-color);
     font-weight: 700;
     margin: 0;
@@ -1361,11 +1396,7 @@ ol {
         background-size: contain;
         top: 70%;
     }
-    .storfy-license-list-wrap .storfy-list-sec-content .storfy-timer-btn a {
-        width: 90%;
-        min-height: 130px;
-        padding-top: 25px;
-    }
+
 }
 
 @media(max-width:1399.98px) {
