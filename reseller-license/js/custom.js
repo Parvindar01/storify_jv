@@ -19,7 +19,6 @@
                 Function Calling
             -----------------------------------------------------*/
             this.preLoader();
-            this.popupVideo();
             this.topButton();
             this.countDown();
         },
@@ -33,16 +32,6 @@
                 jQuery(".storfy-preloader").delay(350).fadeOut("slow");
             });
         },
-
-        /*-----------------------------------------------------
-            Fix Tour Video Popup
-        -----------------------------------------------------*/
-        popupVideo: function () {
-            $('.popup-youtube').magnificPopup({
-                type: 'iframe'
-            });
-        },
-
         /*------ Fix GoToTopButton ---------------*/
         topButton: function () {
             var scrollTop = $("#scroll");
