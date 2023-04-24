@@ -352,12 +352,12 @@ ol {
     border-radius: 50px;
     padding: 10px;
 }
-.storfy-intro-img-row {
-    max-width: 850px;
-    margin: auto;
-    border-radius: 10px;
-    overflow: hidden;
-    position: relative;
+.storfy-intro-video iframe {
+    border-radius: 3px;
+    border: 6px solid var(--storfy-white);
+    width: 100%;
+    height: 437px;
+    box-shadow: 0px 4px 30px 0px rgb(0 0 0 / 11%);
 }
 .storfy-banner-content h4 {
     font-size: 40px;
@@ -365,68 +365,8 @@ ol {
     color: #fff;
     padding-top: 40px;
 }
-.storfy-intro-img-row img {
-    border-radius: 3px;
-    border: 6px solid var(--storfy-white);
-}
-.storfy-video-ovarlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: rgb(0 0 0 / 3%);
-    border-radius: 6px;
-}
-.storfy-video-ovarlay a {
-    width: 80px;
-    height: 80px;
-    position: relative;
-    display: inline-block;
-}
-.storfy-video-ovarlay a svg {
-    fill: var(--storfy-white);
-}
-.storfy-intro-img-row iframe {
-    width: 100%;
-    border: 6px solid var(--storfy-white);
-}
-.storfy-video-ovarlay a:before {
-    position: absolute;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    top: 0;
-    box-shadow: 0 0 0 15px rgb(255 255 255 / 80%), 0 0 0 30px rgb(255 255 255 / 60%), 0 0 0 45px rgb(255 255 255 / 40%);
-    z-index: 0;
-    animation: modalRipple 2s infinite;
-    content: "";
-    border-radius: 50%;
-}
-.storfy-intro-img {
+.storfy-intro-video {
     margin: 50px 0 -180px;
-}
-@keyframes modalRipple
-{
-    0%{
-        opacity:0;
-        -webkit-transform:scale(.5);
-        transform:scale(.5)
-    }
-    10%{
-        opacity:1
-    }
-    90%{
-        opacity:0
-    }
-    to{
-        opacity:0;
-        -webkit-transform:scale(1);
-        transform:scale(1)
-    }
 }
 .storfy-video-ovarlay a:hover svg{
     fill: var(--storfy-primary-color);
@@ -839,6 +779,9 @@ section.storfy-guarantee-wrapper .storfy-title h4 span{
     .storfy-title h4 {
         font-size: 34px;
     }
+    .storfy-intro-video iframe {
+        height: 425px;
+    }
 }
 @media(max-width:1199.98px) {
     .storfy-banner-wrapper:before, .storfy-banner-wrapper:after{
@@ -858,10 +801,16 @@ section.storfy-guarantee-wrapper .storfy-title h4 span{
     .storfy-gaurantee-box {
         padding: 40px;     
     }
+    .storfy-intro-video iframe {
+        height: 360px;
+    }
 }
 @media(max-width:991.98px) {
     .storfy-banner-title {
         font-size: 26px;
+    }
+    .storfy-intro-video iframe {
+        height: 395px;
     }
     .subtitle {
         font-size: 18px;
@@ -897,7 +846,6 @@ section.storfy-guarantee-wrapper .storfy-title h4 span{
     .storfy-timer-box {
         max-width: 100%;     
     }
-
     .storfy-banner-shaps {
         display: none;
     }
@@ -914,11 +862,18 @@ section.storfy-guarantee-wrapper .storfy-title h4 span{
     .second-row, .fourth-row {
         flex-direction: column-reverse;
     }
+    .storfy-intro-video iframe {
+        height: 305px;
+    }
 }
 
 @media(max-width:575.98px) {
     .storfy-banner-content h4 {
         font-size: 20px;     
+    }
+    .storfy-intro-video iframe {
+        height: max-content;
+        width: max-content;
     }
     .storfy-banner-content span.storfy-video-banner-title {
         font-size: 16px;        

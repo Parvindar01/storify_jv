@@ -15,12 +15,16 @@
   --yellow3-color: #ff9c01;
   --blue2-color: #13befe;
 }
+html {
+  scroll-behavior: smooth;
+}
 body{
   font-family: 'Poppins', sans-serif;
   -webkit-font-smoothing: antialiased;
   padding: 0px;
   margin: 0px;  
   line-height: 1.5
+  -webkit-font-smoothing: antialiased;
 }
 ol, ul, dl{list-style: none; padding: 0; margin: 0;}p{font-size: 20px; line-height: 1.3; color: var(--textColor); padding: 0; margin: 0;}::selection{background-color: #1CB686; color: #fff;}a, a:hover{text-decoration: none;}img{max-width: 100%;}h1,h2,h3,h4,h5,h6{padding: 0; margin: 0;line-height: 1.5;}
 .container {
@@ -411,6 +415,9 @@ to {
   height: 480px;
   box-shadow: 0px 0px 20px 0px #1db27d1f;
 }
+.jv_video > iframe {
+  border-radius: 10px;
+}
 .jv_video video {
   width: 100%;
   height: 100%;
@@ -433,6 +440,9 @@ to {
   padding: 13px 41px;
   margin-bottom: 60px;
 }
+.s2h3:hover {
+  color: #fff;
+}
 .sp_Gtimer {
   max-width: 770px;
   margin: auto;
@@ -440,7 +450,7 @@ to {
 .sp_secTimerWrap {
   display: flex;
   align-items: center;
-  background: #040e1d;
+  background: var(--primary-color);
   text-align: center;
   padding: 13px 10px 6px;
   justify-content: center;
@@ -658,6 +668,9 @@ to {
 .sp_sec5_img {
   margin-bottom: 100px;
 }
+.sp_section5_mockup > img {
+  margin-left: -16%;
+}
 /* section 6 */
 .sp_section6 {
 background: url(../images/sec6bg.png) #f8fbff no-repeat top center / cover;
@@ -703,6 +716,65 @@ padding-top: 230px;
   margin-top: 4px;
   flex: none;
 }
+.sp_nothanks:hover {
+  color: var(--blue2-color);
+}
+/* footer */
+.sp_footer {
+  background-color: #30363c;
+  text-align: center;
+  padding: 15px 10px;
+  margin-top: -1px
+}
+.sp_footer-link > li > a:after {
+  content: "";
+  position: absolute;
+  right: 0px;
+  top: 0;
+  bottom: 0;
+  background: #fff;
+  width: 2px;
+  margin: auto;
+  height: 13px;
+}
+.sp_footer-link {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.sp_footer-link > li > a {
+  font-size: 16px;
+  color: #ffffff;
+  position: relative;
+  display: inline-block;
+  padding: 0 10px;
+}
+.sp_footer-link > li:last-child > a:after {
+  display: none;
+}
+.sp_footer-link > li:last-child > a {
+padding-right: 0;
+}
+.st_mini_footer > p {
+  font-size: 16px;
+}
+/* footer */
+/* zoom animation  */
+.zoom_animation{
+  animation: stretch 0.8s ease infinite;
+}
+@keyframes stretch {
+  0% {
+      transform: scale(1, 1);
+    }
+    50% {
+      transform: scale(1.02, 1.02);
+    }
+    100% {
+      transform: scale(1, 1);
+    }
+}
+/* zoom animation  */
 /* responsive css */
 @media(max-width:1600px){
   .sp_bannerAnime_img > img {
@@ -715,6 +787,9 @@ padding-top: 230px;
 }
 .size38 {
   font-size: 32px;
+}
+.size26 {
+  font-size: 22px;
 }
 }
 @media(max-width:1199px){
@@ -740,10 +815,14 @@ padding-top: 230px;
 .mainHeadingTTL {
   font-size: 30px;
 }
-
-
 .size42 {
   font-size: 28px;
+}
+.size20 {
+  font-size: 18px;
+}
+.sp_IconBoxTextT {
+  font-size: 18px;
 }
 }
 @media(max-width:991px){
@@ -783,6 +862,10 @@ padding-top: 230px;
   width: 39px;
   height: 92px;
 }
+.jv_video {  
+  max-width: 700px;
+  height: 408px;
+}
 .sp_h1 {
   font-size: 18px;
   padding: 12px 25px;
@@ -802,6 +885,12 @@ font-size: 24px;
 }
 .size38 {
   font-size: 24px;
+}
+.size24 {
+  font-size: 20px;
+}
+.size20 {
+  font-size: 16px;
 }
 }
 @media(max-width:767px){
@@ -832,6 +921,7 @@ font-size: 24px;
 }
 .jv_video {
   height: 298px;
+  max-width: 525px;
 }
 .sp_bannerAnime_img > img {
   max-width: 45px;
@@ -854,12 +944,18 @@ font-size: 24px;
 .money_backBox {
   padding: 30px 30px;
 }
-
+.size26 {
+  font-size: 21px;
+}
 
 }
 @media(max-width:575px){
 .sp_bannerWrapper br{
   display: none;
+}
+.jv_video {
+  height: 256px;
+  max-width: 433px;
 }
 .size42 {
   font-size: 18px;
@@ -876,8 +972,15 @@ font-size: 24px;
 .sp_sec9_details {
   padding: 20px 20px;
 }
+.money_backBox {
+  padding: 10px 10px;
+}
 }
 @media(max-width:480px){
+  .jv_video {
+    height: 180px;
+    max-width: 310px;
+  }
   .sp_bannerAnime_img > img {
     max-width: 30px;
 }
@@ -886,9 +989,6 @@ font-size: 24px;
 }
 .bannerArrow:after {
 display: none;
-}
-.jv_video {
-  height: auto;
 }
 .sp_secTimerCounter .ce-col {
   padding: 2px 10px;
@@ -922,4 +1022,16 @@ display: none;
   background-size: cover;
   background-position: inherit;
 }
+.sp_IconBoxTextT {
+  font-size: 16px;
+}
+.size26 {
+  font-size: 18px;
+}
+.size24 {
+  font-size: 18px;
+}
+}
+@media(max-width:480px){
+
 }
