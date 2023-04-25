@@ -213,7 +213,7 @@ ol {
 }
 /* budget */
 .storfy-budget {
-    background: var(--storfy-budget-color);
+    background: var(--storfy-primary-color);
     color: var(--storfy-white);
     border-radius: 10px;
     padding: 8px 15px 10px;
@@ -335,7 +335,7 @@ ol {
     content: '';
     max-width: 920px;
     border-radius: 40px 0 40px 0;
-    background-color: var(--storfy-budget-color);
+    background-color: var(--storfy-primary-color);
     opacity: 0.5;
     position: absolute;
     top: 0;
@@ -396,7 +396,7 @@ ol {
     text-align: center;
 }
 .storfy-title h4 strong {
-    color: var(--storfy-budget-color);
+    color: var(--storfy-primary-color);
 }
 .subtitle {
     font-size: 22px;
@@ -598,7 +598,7 @@ ol {
     margin-bottom: 0;
 }
 .storfy-wlcom-content h4 span {
-    color: var(--storfy-budget-color);
+    color: var(--storfy-primary-color);
     font-weight: 800;
 }
 /* Happy Girl */
@@ -609,15 +609,15 @@ ol {
     padding-bottom: 50px;
 }
 .storfy-happy-girl-wrapper .storfy-title h4 span {
-    color: var(--storfy-budget-color);
+    color: var(--storfy-primary-color);
 }
 .storfy-list-sec-img img {
-    width: 500px;
-    height: auto;
+    /* width: 380px;
+    height: auto; */
 }
 .storfy-list-sec-content {    
     border-radius: 10px;
-    filter: drop-shadow(0 0 15px rgba(22,22,22,0.1));
+    box-shadow: 0 0 20px 0 rgb(28 182 134 / 6%);
     background-color: var(--storfy-white);
     padding: 30px 30px;    
 }
@@ -645,7 +645,7 @@ ol {
     background-size: 25px 20px;
 }
 .storfy-list-sec-content ul li strong{
-    color: var(--storfy-budget-color);
+    color: var(--storfy-primary-color);
 }
 /* Monthly upgrade css start */
 .storfy-month-upgrade-wrapper{
@@ -671,6 +671,7 @@ ol {
 .storfy-image img {
     width: 600px;
     height: auto;
+    margin-left: -14%;
 }
 /* Monthly upgrade css end */
 /* Major Benefits css start */
@@ -682,7 +683,7 @@ ol {
     padding-bottom: 50px;
 }
 .storfy-benefits-wrapper .storfy-title h4 span{ 
-    color: var(--storfy-budget-color);
+    color: var(--storfy-primary-color);
 }
 .storfy-border-box-wrap {
     display: flex;
@@ -732,7 +733,7 @@ section.storfy-guarantee-wrapper .storfy-title h4 span{
     background: #fff;
     padding: 50px 50px 50px 200px;
     border-radius: 10px;
-    border: 5px solid var(--storfy-budget-color);
+    border: 5px solid var(--storfy-primary-color);
     display: flex;
     position: relative;
     max-width: 1100px;
@@ -768,7 +769,7 @@ section.storfy-guarantee-wrapper .storfy-title h4 span{
 .sp_nothanks {
     color: var(--storfy-title-color);
     font-size: 18px;
-    font-weight: 600;
+    font-weight: 700;
 }
 /* footer link */
 .sp_footer-link > li > a:after {
@@ -1002,8 +1003,6 @@ section.storfy-guarantee-wrapper .storfy-title h4 span{
         padding: 30px 20px 20px;
     }
     .ce-countdown>div {
-        min-width: 90px;
-        min-height: 90px;
         margin: 10px 10px;
     }
     .storfy-timer-btn a {
