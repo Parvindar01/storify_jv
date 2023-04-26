@@ -1214,15 +1214,24 @@ ol {
     background: #f0fdf9;
     border: 1px solid #d1fff0;
     border-radius: 10px;
-    padding: 30px 40px;
+    padding: 30px 40px 30px 0px;
     box-shadow: 0 0 20px 0 rgb(28 182 134 / 6%);
     position: relative;
     font-size: 20px;
     font-weight: 600;
-    margin: 180px 0 30px;
+    margin: 50px 0 30px;
+    display: flex;
+    align-items: center;
 }
-.storfy-money-back-box .storfy-image {
-    margin: -180px 0 40px;
+.storfy-money-back-wrapper .storfy-money-back-box > div {
+    padding: 10px;
+    flex: 4;
+}
+.storfy-money-back-wrapper .storfy-money-back-box > div {
+    padding: 10px;
+}
+.storfy-money-back-wrapper .storfy-money-back-box .storfy-content {
+    flex: 8;
 }
 .storfy-content p strong {
     color: var(--storfy-yellow);
@@ -1527,6 +1536,11 @@ ol {
 }
 
 @media(max-width:767.98px) {
+    .storfy-money-back-box {
+        flex-direction: column;
+        text-align: center;
+        padding: 20px;
+    }
     .storfy-banner-shaps {
         display: none;
     }
