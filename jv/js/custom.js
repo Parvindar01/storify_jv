@@ -42,6 +42,9 @@ $(document).ready(function () {
         $('.jv_menu_wrapper ').toggleClass('menu_open');
     })
 
+
+
+
 });
 $(window).scroll(function () {
     var scroll = $(window).scrollTop();
@@ -51,42 +54,27 @@ $(window).scroll(function () {
         $(".jv_header_wrapper").removeClass("fixedHeader");
     }
 });
-// dynamic banner padding top
-// $(document).ready(function(){
-//     var defaultheight = 45;
-//     var headerheight = $('.jv_header_wrapper ').innerHeight();
-//     $('.jv_banner_wrapper').css('padding-top', ($('.jv_header_wrapper ').innerHeight()+45));
-// });
 
-// function createbonuspage(){
-//     var bonus_fname = $.trim($('#bonus_fname').val());
-//     var bonus_link = $.trim($('#bonus_link').val());
-//     if( bonus_fname !== '' && bonus_link !== '' )
-//     {
-//         $('#bonus_error').text('');
-//         $.post("https://storify.com/bonus-page/generate.php",
-//         {
-//             bonus_fname: bonus_fname,
-//             bonus_link: bonus_link
-//         },
-//         function(data, status){
-//             console.log(data);
-//             var response = data.split('|');
-//             if( response[0] == 0 ){
-//                 $('#bonus_error').css('color','red');
-//                 $('#bonus_error').text(response[1]);
-//             }
-//             else{
-//                 $('#bonus_error').css('color','green');
-//                 $('#view_bonus_page').attr('href','https://storify.com/bonus-page/j.php?Storify=lsh'+response[1]);
-//                 $('#view_bonus_page').removeClass('d-none');
-//                 $('#download_bonus_page').attr('href','https://storify.com/members/home/bonuspagedownload/'+response[1]);
-//                 $('#download_bonus_page').removeClass('d-none');
-//             }
-//         });
-//     }
-//     else{
-//         $('#bonus_error').text('Please, fill both the details.');
-//         $('#bonus_error').css('color','red');
-//     }
-// }
+$(document).ready(function () {
+    // go to top
+    // var scrollTop = $("#scroll");
+    // $(window).on('scroll', function () {
+    //     if ($(this).scrollTop() < 500) {
+    //         scrollTop.removeClass("active");
+    //     } else {
+    //         scrollTop.addClass("active");
+    //     }
+    // });
+    // $('#scroll').click(function () {
+    //     $("html, body").animate({
+    //         scrollTop: 0
+    //     }, 500);
+    //     return false;
+    // });
+    // $(function () {
+    //     $('.go-to-demo').click(function () {
+    //         $('html, body').animate({ scrollTop: $('#go-to-demo').offset().top }, 'slow');
+    //         return false;
+    //     });
+    // });
+});

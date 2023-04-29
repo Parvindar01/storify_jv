@@ -1,9 +1,9 @@
-/*--------------------- Copyright (c) 2021 -----------------------
+/*--------------------- Copyright (c) 2023 -----------------------
 [Master Javascript]
 -------------------------------------------------------------------*/
 (function ($) {
 	"use strict";
-	var VidMagnet = {
+	var storify = {
 		initialised: false,
 		version: 1.0,
 		mobile: false,
@@ -19,6 +19,7 @@
 
 			this.loader();
 			this.bottom_top();
+			this.sticky_header();
 
 		},
 
@@ -56,10 +57,10 @@
 
 			}
 		},
-		// Bottom To Top
+
 		// Sticky header
-		bottom_top: function () {
-			if ($('#button').length > 0) {
+		sticky_header: function () {
+			if ($('.st_stickybar_wrapper').length > 0) {
 
 				// stickybar start
 				$('.st_stickybar_toggle').click(function () {
@@ -70,12 +71,10 @@
 				$('body').css('padding-top', barh);
 				// stickybar end
 
-
 				$(window).on('resize', function () {
 					var barh = $('.st_stickybar_wrapper').innerHeight();
 					$('body').css('padding-top', barh);
 				});
-
 			}
 
 		},
@@ -84,7 +83,7 @@
 
 
 	};
-	VidMagnet.init();
+	storify.init();
 
 }(jQuery));
 
