@@ -26,10 +26,10 @@ $(document).ready(function () {
         }
     });
     // ontopscroll
-    $(document).on('click', '.jv_up', function () {
-        $("html, body").animate({ scrollTop: 0 }, "slow");
-        return false;
-    })
+    // $(document).on('click', '.jv_up', function () {
+    //     $("html, body").animate({ scrollTop: 0 }, "slow");
+    //     return false;
+    // })
 
     // responsive menu
     $(document).on('click', '.jv_toggle', function () {
@@ -57,24 +57,24 @@ $(window).scroll(function () {
 
 $(document).ready(function () {
     // go to top
-    // var scrollTop = $("#scroll");
-    // $(window).on('scroll', function () {
-    //     if ($(this).scrollTop() < 500) {
-    //         scrollTop.removeClass("active");
-    //     } else {
-    //         scrollTop.addClass("active");
-    //     }
-    // });
-    // $('#scroll').click(function () {
-    //     $("html, body").animate({
-    //         scrollTop: 0
-    //     }, 500);
-    //     return false;
-    // });
-    // $(function () {
-    //     $('.go-to-demo').click(function () {
-    //         $('html, body').animate({ scrollTop: $('#go-to-demo').offset().top }, 'slow');
-    //         return false;
-    //     });
-    // });
+    var scrollTop = $("#scroll");
+    $(window).on('scroll', function () {
+        if ($(this).scrollTop() < 500) {
+            scrollTop.removeClass("active");
+        } else {
+            scrollTop.addClass("active");
+        }
+    });
+    $('#scroll').click(function () {
+        $("html, body").animate({
+            scrollTop: 0
+        }, 500);
+        return false;
+    });
+    $(function () {
+        $('.go-to-demo').click(function () {
+            $('html, body').animate({ scrollTop: $('#go-to-demo').offset().top }, 'slow');
+            return false;
+        });
+    });
 });

@@ -207,7 +207,7 @@ h1,h2,h3,h4,h5,h6{
   top: 0;
   bottom: 0;
   background-color: rgb(0 0 0 / 70%);
-  z-index: 999;
+  z-index: 3;
   visibility: hidden;
   opacity: 0;
   transition: all 0.5s;
@@ -264,6 +264,9 @@ h1,h2,h3,h4,h5,h6{
   text-transform: capitalize;
   margin: 0 23px;
   position: relative;
+}
+.jv_menu li:last-child {
+  margin-right: 0;
 }
 .jv_menu li a {
   color: rgb(255 255 255);
@@ -426,7 +429,7 @@ h1,h2,h3,h4,h5,h6{
   padding: 0px 10px;
   margin-left: auto;
   margin-right: auto;
-  z-index: 10;
+  z-index: 1;
 }
 .sp_box:before, .sp_box:after {
   content: "";
@@ -1464,12 +1467,73 @@ img.amimation9 {
   bottom: 7%;
   right: 30%;
 }
+
+/* go to top */
+/** Top Button CSS **/
+
+#scroll {
+  position: fixed;
+  right: 15px;
+  bottom: 15px;
+  cursor: pointer;
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  line-height: 36px;
+  z-index: 9;
+  visibility: hidden;
+  -webkit-transform: translateY(150px);
+  -ms-transform: translateY(150px);
+  transform: translateY(150px);
+  background: var(--primaryColor);
+  color: #fff;
+  font-size: 40px;
+  border-radius: 50%;
+  border: 2px solid #3fddac;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.3s;
+}
+#scroll.active {
+  visibility: visible;
+  -webkit-transform: translateY(0);
+  -ms-transform: translateY(0);
+  transform: translateY(0);
+  animation: bounce 2s linear infinite;
+  -webkit-animation: bounce 2s linear infinite;
+  -moz-animation: bounce 2s linear infinite;
+}
+#scroll img {
+  height: 30px;
+}
+#scroll:hover {
+  box-shadow: 0 0 0 25px var(--darkColor) inset;
+  border-color: transparent;
+}
+@keyframes bounce {
+  0%,
+  100% {
+      transform: translateY(-20px);
+  }
+  50% {
+      transform: translateY(0px);
+  }
+}
 @media (min-width: 1200px){
 .container {
     max-width: 1200px;
 }
 }
 @media(max-width:1400px){
+  .jv_menu li {
+    margin: 0 15px;
+  }
+  .jv_menu li.sp_btnHead a {
+    padding: 0px 20px;
+    font-size: 16px;
+    font-weight: 500;
+}
   .sp_banner_content h1, .jv_btnYellow span {
     font-size: 30px;
   }
@@ -1484,6 +1548,16 @@ img.amimation9 {
   }
 }
 @media(max-width:1200px){
+  .jv_headContainer .sp_logo > img {
+    max-width: 100px;
+  }
+  .jv_menu li {
+    margin: 0 10px;
+  }
+  .jv_menu li.sp_btnHead a {
+    padding: 0px 15px;
+    font-size: 14px;
+}
   .sp_greenBox h4 {
     font-size: 18px;
   }
