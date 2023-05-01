@@ -114,6 +114,10 @@ body {
     .yellow_text_color{	
         color: #ffba00;	
     }
+    a.fp_link{
+        color: #fff;
+        margin-top: 20px;
+    }
     .st_angle_bottom a {
         display: inline-flex;
         justify-content: center;
